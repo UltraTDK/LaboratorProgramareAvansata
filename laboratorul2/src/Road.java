@@ -4,53 +4,48 @@ public class Road {
     private Location locationA;
     private Location locationB;
 
-    public Road(String name, RoadType type, Location a, Location b) {
+    public Road(String name, RoadType type, Location locationA, Location locationB) {
         this.name = name;
         this.type = type;
-        this.locationA = a;
-        this.locationB = b;
-    }
-
-    public Location getLocationA() {
-        return locationA;
-    }
-
-    public void setLocationA(Location locationA) {
         this.locationA = locationA;
-    }
-
-    public Location getLocationB() {
-        return locationB;
-    }
-
-    public void setLocationB(Location locationB) {
         this.locationB = locationB;
     }
 
     public String getName() {
         return name;
     }
+    public RoadType getType() {
+        return type;
+    }
+    public Location getLocationA() {
+        return locationA;
+    }
+    public Location getLocationB() {
+        return locationB;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
-
-    public RoadType getType() {
-        return type;
-    }
-
     public void setType(RoadType type) {
         this.type = type;
     }
+    public void setLocationA(Location locationA) {
+        this.locationA = locationA;
+    }
+    public void setLocationB(Location locationB) {
+        this.locationB = locationB;
+    }
 
-//    @Override
-//    public boolean equals(Object obj) {
-//        if (obj == null || !(obj instanceof Room)) {
-//            return false;
-//        }
-//        Road other = (Road) obj;
-//        return name.equals(other.name);
-//    }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Road)) {
+            return false;
+        }
+        Road road = (Road) obj;
+        return name.equals(road.name) && locationA.equals(road.locationA)
+                && locationB.equals(road.locationB);
+    }
 
     @Override
     public String toString() {
