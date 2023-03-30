@@ -5,6 +5,7 @@ import java.util.List;
 
 
 public class Catalog implements Serializable {
+    
     private String name;
     private String path;
     private List<Document> docs = new ArrayList<>();

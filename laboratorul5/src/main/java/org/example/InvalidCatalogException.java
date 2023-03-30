@@ -6,4 +6,3 @@ public class InvalidCatalogException extends Exception {
         super("Invalid catalog file.", ex);
     }
 }
-

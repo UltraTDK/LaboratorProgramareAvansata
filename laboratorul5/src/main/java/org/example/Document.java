@@ -1,11 +1,11 @@
 package org.example;
-import javax.print.Doc;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class Document implements Serializable {
+
     private String id;
     private String title;
     private String location;
@@ -13,6 +13,7 @@ public class Document implements Serializable {
 
     public Document() {}
 
+    
     public Document(String id, String title, String location) {
         this.id = id;
         this.title = title;

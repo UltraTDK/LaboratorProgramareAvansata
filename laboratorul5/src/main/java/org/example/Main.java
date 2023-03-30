@@ -1,13 +1,19 @@
 package org.example;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Main {
+    
     public static void main(String args[]) throws InvalidCatalogException {
+
+        // Compulsory
         Main compulsory = new Main();
         compulsory.testCreateSave();
         compulsory.testLoad();
+        
+        
+        // Homework
         Parameter parameter = new Parameter();
+        compulsory.testApp(parameter);
     }
 
 
@@ -26,5 +32,16 @@ public class Main {
     private void testLoad() throws InvalidCatalogException {
         Catalog catalog = CatalogUtil.load("C:\\Date\\Facultate\\Anul 3\\Semestrul 2\\Java\\Laborator\\laboratorul5\\Catalog\\catalog.json");
         System.out.println(catalog.getDocuments());
+    }
+
+
+    private void testApp(Parameter parameter) throws InvalidCatalogException {
+        CatalogApp app = new CatalogApp();
+        try {
+            app.run(parameter);
+        } catch (CommandException e) {
+            System.err.println("Error: " + e.getMessage());
+            System.exit(1);
+        }
     }
 }
