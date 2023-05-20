@@ -19,7 +19,7 @@ public class GameServer {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Un client nou s-a conectat: " + clientSocket.getInetAddress().getHostAddress());
 
-                // Start a new thread to handle the client
+                // pornesc un thread pentru fiecare client
                 ClientThread clientThread = new ClientThread(clientSocket);
                 clientThread.start();
             }

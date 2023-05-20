@@ -31,11 +31,9 @@ public class ClientThread extends Thread {
             }
 
             clientSocket.close();
-            System.out.println("Clientul s-a deconectat");
+            System.out.println("Clientul s-a deconectat.");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 }
-
-
