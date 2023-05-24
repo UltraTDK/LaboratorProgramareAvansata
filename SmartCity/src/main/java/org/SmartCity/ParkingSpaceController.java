@@ -4,24 +4,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import org.springframework.ui.Model;
 
 @RestController
 public class ParkingSpaceController {
     @RequestMapping("/smartcity")
     @ResponseBody
-    public static void main(String[] args) {
-
+    public String displayData(Model model) {
         Scanner scanner = new Scanner(System.in);
-        boolean exit = Boolean.FALSE;
 
-        while(exit == Boolean.FALSE) {
-            System.out.println("Bine ai venit in aplicatia SmartCity.");
-            System.out.println("1. Generarea unui raport al locurilor de parcare libere.");
-            System.out.println("2. Exit.");
-            System.out.println("(Alege una dintre optiuni:)");
-            String getOrSet = scanner.nextLine();
-            if ("1".equalsIgnoreCase(getOrSet)) {
+        while(true) {
+            List<String> data = new ArrayList<>();
+            String option = scanner.nextLine();
+            model.addAttribute("option", option);
+            if ("1".equalsIgnoreCase(option)) {
                 ParkingSpace parkingSpace = new ParkingSpace(15);
                 ParkingSpaceManager manager = new ParkingSpaceManager(parkingSpace);
                 SmartAssistant assistant = new SmartAssistant();
@@ -40,7 +39,7 @@ public class ParkingSpaceController {
 
                 // calcul pt pretul unei rezervaro
                 double reservationPrice = feesHandler.calculateReservationPrice(2);
-                System.out.println("Reservation price: " + reservationPrice);
+                data.add("Reservation price: " + reservationPrice);
 
                 // verificare daca asistentul trimite notificari
                 assistant.sendNotification("Loc de parcare liber.");
@@ -49,35 +48,36 @@ public class ParkingSpaceController {
                 System.out.println("Numarul locurilor de parcare initiale: " + parkingSpace.getCapacity());
                 System.out.println("Locurile de parcare initiale:");
                 for (ParkingLot parkingLot : parkingSpace.getParkingLots()) {
-                    System.out.println("Locul de parcare " + parkingLot.getLotNumber() + ": Ocupat: " + parkingLot.isOccupied());
+                    data.add("Locul de parcare " + parkingLot.getLotNumber() + ": Ocupat: " + parkingLot.isOccupied());
                 }
 
                 // cresterea capacitatii
                 parkingSpace.setCapacity(12);
 
-                System.out.println("Numarul locurilor de parcare dupa crestere: " + parkingSpace.getCapacity());
-                System.out.println("Locurile de parcare dupa crestere:");
+                data.add("Numarul locurilor de parcare dupa crestere: " + parkingSpace.getCapacity());
+                data.add("Locurile de parcare dupa crestere:");
                 for (ParkingLot parkingLot : parkingSpace.getParkingLots()) {
-                    System.out.println("Locul de parcare " + parkingLot.getLotNumber() + ": Ocupat: " + parkingLot.isOccupied());
+                    data.add("Locul de parcare " + parkingLot.getLotNumber() + ": Ocupat: " + parkingLot.isOccupied());
                 }
 
                 // scaderea capacitatii
                 parkingSpace.setCapacity(8);
 
-                System.out.println("Numarul locurilor de parcare dupa scadere: " + parkingSpace.getCapacity());
-                System.out.println("Locurile de parcare dupa scadere:");
+                data.add("Numarul locurilor de parcare dupa scadere: " + parkingSpace.getCapacity());
+                data.add("Locurile de parcare dupa scadere:");
                 for (ParkingLot parkingLot : parkingSpace.getParkingLots()) {
-                    System.out.println("Locul de parcare " + parkingLot.getLotNumber() + ": Ocupat: " + parkingLot.isOccupied());
+                    data.add("Locul de parcare " + parkingLot.getLotNumber() + ": Ocupat: " + parkingLot.isOccupied());
                 }
-            } else if ("3".equalsIgnoreCase(getOrSet)) {
-                exit = Boolean.TRUE;
+                model.addAttribute("data", data);
+            } else if ("2".equalsIgnoreCase(option)) {
+                data.add("Multumim pentru ca ati folositi aplicatia!");
+                model.addAttribute("data", data);
+                break;
             }
         }
 
         scanner.close();
 
-        System.out.println("Multumim pentru ca ne folositi aplicatia!");
-
-        System.exit(0);
+        return "smart-city";
     }
 }

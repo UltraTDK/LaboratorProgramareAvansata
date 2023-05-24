@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smart City</title>
+        <style>
+            body {
+                background-color: #f4f4f4;
+                font-family: Georgia, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                text-align: center;
+            }
+
+            .text-container {
+                background-color: #ffffff;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                color: #333333;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: #666666;
+                font-size: 18px;
+            }
+
+            .submit-button {
+                display: inline-block;
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 4px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .submit-button:hover {
+                background-color: #45a049;
+            }
+
+            .input-text {
+                padding: 10px;
+                font-size: 16px;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                transition: border-color 0.3s ease;
+            }
+
+            .input-text:focus {
+                border-color: #4CAF50;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="text-container">
+            <h1>Bine ai venit pe Smart City</h1>
+            <p> Optiuni: </p>
+            <p> 1. Generare raport </p>
+            <p> 2. Exit </p>
+
+
+            <form action="#" method="post">
+                <input type="text" class="input-text" placeholder="Alege una dintre optiuni"  th:field="${option}" />
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+
+            <p>Raport: <span th:text="${data}"></span></p>
+        </div>
+    </body>
+</html>
