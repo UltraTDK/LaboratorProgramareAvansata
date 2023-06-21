@@ -14,12 +14,15 @@ public class Road {
     public String getName() {
         return name;
     }
+
     public RoadType getType() {
         return type;
     }
+
     public Location getLocationA() {
         return locationA;
     }
+
     public Location getLocationB() {
         return locationB;
     }
@@ -27,12 +30,15 @@ public class Road {
     public void setName(String name) {
         this.name = name;
     }
+
     public void setType(RoadType type) {
         this.type = type;
     }
+
     public void setLocationA(Location locationA) {
         this.locationA = locationA;
     }
+
     public void setLocationB(Location locationB) {
         this.locationB = locationB;
     }

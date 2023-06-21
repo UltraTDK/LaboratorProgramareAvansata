@@ -2,7 +2,6 @@ package com.laborator;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import com.laborator.*;
 
 public class MatrixMap {
     private int mapSize;

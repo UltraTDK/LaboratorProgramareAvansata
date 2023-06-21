@@ -1,5 +1,4 @@
 package org.example;
-import java.util.Objects;
 
 public class Project implements Comparable<Project> {
     private String name;

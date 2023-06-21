@@ -1,20 +1,16 @@
 package org.example;
 
-
 public class CatalogApp {
 
     private Catalog catalog;
-
 
     public void setCatalog(Catalog catalog) {
         this.catalog = catalog;
     }
 
-
     public CatalogApp() {
         this.catalog = new Catalog();
     }
-
 
     public void run(Parameter parameter) throws CommandException {
 
@@ -22,9 +18,7 @@ public class CatalogApp {
             throw new CommandException("Invalid command");
         }
 
-
         Command command;
-
 
         switch (parameter.name) {
             case "load":

@@ -26,7 +26,7 @@ public class Problem {
     public void addLocation(Location newLocation) {
         int valid = 1;
         for (Location location : locations) {
-            if(location.equals(newLocation)) {
+            if (location.equals(newLocation)) {
                 valid = 0;
             }
         }
@@ -41,7 +41,7 @@ public class Problem {
     public void addRoad(Road newRoad) {
         int valid = 1;
         for (Road road : roads) {
-            if(road.equals(newRoad)) {
+            if (road.equals(newRoad)) {
                 valid = 0;
             }
         }

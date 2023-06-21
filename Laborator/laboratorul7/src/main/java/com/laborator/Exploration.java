@@ -1,7 +1,6 @@
 package com.laborator;
 
 import java.util.ArrayList;
-import com.laborator.Position;
 
 public class Exploration {
     private ArrayList<Robot> robots;

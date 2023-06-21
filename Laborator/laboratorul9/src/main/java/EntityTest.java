@@ -16,11 +16,11 @@ public class EntityTest {
         System.out.println("Retrieved entity: " + retrievedEntity);
 
         // cautare entitati dupa nume
-//        List<EntityModel> entities = data.findByName("Andrei%");
-//        System.out.println("Entitati cu numele 'Andrei':");
-//        for (EntityModel e : entities) {
-//            System.out.println(e);
-//        }
+        // List<EntityModel> entities = data.findByName("Andrei%");
+        // System.out.println("Entitati cu numele 'Andrei':");
+        // for (EntityModel e : entities) {
+        // System.out.println(e);
+        // }
 
         EntityManager.closeEntityManagerFactory();
     }

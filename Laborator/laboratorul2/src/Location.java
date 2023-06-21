@@ -12,9 +12,11 @@ public class Location {
     public String getName() {
         return name;
     }
+
     public Double getX() {
         return setX;
     }
+
     public Double getY() {
         return setY;
     }
@@ -22,9 +24,11 @@ public class Location {
     public void setName(String name) {
         this.name = name;
     }
+
     public void setX(Double X) {
         this.setX = X;
     }
+
     public void setY(Double Y) {
         this.setY = Y;
     }

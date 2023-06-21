@@ -28,14 +28,15 @@ public class EntityData {
         }
     }
 
-//    public List<EntityModel> findByName(String namePattern) {
-//        EntityManager entityManager = entityManagerFactory.createEntityManager();
-//        try {
-//            TypedQuery<EntityModel> query = entityManager.createNamedQuery("EntityData.findByName", EntityModel.class);
-//            query.setParameter("namePattern", namePattern);
-//            return query.getResultList();
-//        } finally {
-//            entityManager.close();
-//        }
-//    }
+    // public List<EntityModel> findByName(String namePattern) {
+    // EntityManager entityManager = entityManagerFactory.createEntityManager();
+    // try {
+    // TypedQuery<EntityModel> query =
+    // entityManager.createNamedQuery("EntityData.findByName", EntityModel.class);
+    // query.setParameter("namePattern", namePattern);
+    // return query.getResultList();
+    // } finally {
+    // entityManager.close();
+    // }
+    // }
 }

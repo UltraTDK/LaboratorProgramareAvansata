@@ -1,16 +1,14 @@
 package org.example;
+
 import java.io.File;
 
-
 public class ViewCommand implements Command {
-    
-    private String filePath;
 
+    private String filePath;
 
     public ViewCommand(String filePath) {
         this.filePath = filePath;
     }
-
 
     @Override
     public void execute() throws CommandException {

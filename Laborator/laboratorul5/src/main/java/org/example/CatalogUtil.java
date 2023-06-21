@@ -1,10 +1,10 @@
 package org.example;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.*;
 
-
 public class CatalogUtil {
-    
+
     public static void save(Catalog catalog, String path) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -14,9 +14,8 @@ public class CatalogUtil {
         }
     }
 
-
     public static Catalog load(String path) {
-        
+
         Catalog catalog = new Catalog();
         ObjectMapper objectMapper = new ObjectMapper();
         try {

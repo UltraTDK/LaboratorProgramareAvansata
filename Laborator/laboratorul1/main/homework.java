@@ -1,3 +1,5 @@
+package main;
+
 public class homework {
     public static void main(String[] args) {
         int n = 0;
@@ -11,7 +13,7 @@ public class homework {
         // timpul in ms cand incepe rularea codului
         long startTime = System.currentTimeMillis();
         // initializare matrice
-        int[][] matrice = new int[n][n]; 
+        int[][] matrice = new int[n][n];
         // pentru a sari prima rulare din bucla while
         int ultimulElement = n + 1;
         for (int i = 1; i <= n; i++) {
@@ -20,19 +22,19 @@ public class homework {
             // afisez nr de la noul elem pana la 1
             while (temp <= n) {
                 if (k < 3) {
-                    matrice[k++][i-1] = temp;
-                } 
+                    matrice[k++][i - 1] = temp;
+                }
                 temp += 1;
             }
-    
+
             // afisez nr de la 1 la ultimul element
             for (int j = 1; j < ultimulElement; j++)
                 if (k < 3) {
-                    matrice[k++][i-1] = j;
-                } 
+                    matrice[k++][i - 1] = j;
+                }
             ultimulElement -= 1;
         }
-        
+
         // timpul in ms cand se termina rularea codului
         long endTime = System.currentTimeMillis();
 

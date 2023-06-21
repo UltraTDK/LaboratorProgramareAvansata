@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        DbConnManager connection =  new DbConnManager("jdbc:oracle:thin:@localhost:1521:XE", "andrei", "andrei");
+        DbConnManager connection = new DbConnManager("jdbc:oracle:thin:@localhost:1521:XE", "andrei", "andrei");
         ArtistDao artistDao = new ArtistDao(connection);
         List<Artist> artists = artistDao.getAllArtists();
 

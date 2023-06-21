@@ -33,8 +33,7 @@ public class Robot implements Runnable {
                         System.out.println("Am extras tokeni de la pozitia" + unvisitedCell);
                     }
                 }
-            }
-            else {
+            } else {
                 synchronized (pauseLock) {
                     try {
                         pauseLock.wait();
@@ -70,4 +69,3 @@ public class Robot implements Runnable {
         }
     }
 }
-
