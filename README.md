@@ -1,4 +1,4 @@
-# LaboratorProgrameAvansata
+# Laborator Programare Avansata
 Aici o sa fie postate solutiile din cadrul laboratoarelor de Programare Avansata  
 
 * Student:  
