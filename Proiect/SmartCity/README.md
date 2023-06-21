@@ -1,8 +1,8 @@
 # Cum am structurat proiectul Smart City
 
-* Proiectarea aplicatiei SmartCity:
-
 o	Cerinta: “Creaza o aplicatie care sa administreze locurile de parcare si sa ofere asistenta soferilor.”
+
+* Proiectarea aplicatiei SmartCity:
 
 * 	Clasele necesare acestui proiect:
 
