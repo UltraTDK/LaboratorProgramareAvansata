@@ -4,19 +4,19 @@
 
 o	Cerinta: “Creaza o aplicatie care sa administreze locurile de parcare si sa ofere asistenta soferilor.”
 
-o	Clasele necesare acestui proiect:
+* 	Clasele necesare acestui proiect:
 
-    o	ParkingSpace
+    *   ParkingSpace
 
-    o	ParkingSpaceManager
+    *	ParkingSpaceManager
 
-    o	ParkingLot
+    *	ParkingLot
 
-    o	Vehicle
+    *	Vehicle
 
-    o	SmartAssistant
+    *	SmartAssistant
 
-    o	FeesHandler
+    *	FeesHandler
 
 * ParkingSpace: contine un numar ‘X’ de locuri de parcare.
 
